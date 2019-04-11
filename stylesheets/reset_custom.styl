@@ -1,0 +1,174 @@
+// colorGreen = #D5DB05;
+// colorGreenLight = #C2C084;
+// colorBlack = #554337;
+// colorWhite = #F2F2F2;
+// colorWhitePure = #ffffff;
+// colorYellow = #FFB820;
+// colorBrown = #AF3A1E;
+// colorGray = #e8e8e8;
+colorGreen = #72d533;
+colorBlack = #2b2b2b;
+colorWhite = #fafafa;
+colorWhitePure = #ffffff;
+colorBlue = #1dc5c9;
+colorBlueLight = #3fd9da;
+colorGray = #e8e8e8;
+
+body
+    background-color colorGray
+//萬用清浮動
+.clear
+    clear both
+//一般文字反白
+h1::selection,h2::selection,h3::selection,h4::selection,p::selection
+	background-color colorBlack
+	color colorWhitePure
+h1::-moz-selection,h2::-moz-selection,h3::-moz-selection,h4::-moz-selection,p::-moz-selection
+	background-color colorBlack
+	color colorWhitePure
+//去除超連結樣式
+a,a:link,a:visited
+	color colorBlack
+	text-decoration none
+a:hover
+	color colorBlack
+	text-decoration none
+a::selection
+	background-color rgba(0,0,0,0)
+a::-moz-selection
+	background-color rgba(0,0,0,0)
+	
+.font_1_black
+	font-size 1em
+	letter-spacing .2em
+	font-weight 600
+	color colorBlack
+	line-height 1.5
+.font_1_Blue
+	font-size 1em
+	letter-spacing .2em
+	font-weight 600
+	color colorBlue
+	line-height 1.5
+
+
+.font_06_black
+	font-size .6em
+	letter-spacing .06em
+	color colorBlack
+	line-height 1.5
+.font_06_white
+	font-size .6em
+	letter-spacing .06em
+	color colorWhite
+	line-height 1.5
+.font_08_black
+	font-size .8em
+	letter-spacing .08em
+	color colorBlack
+	line-height 1.8
+	font-weight 300
+.font_08_white
+	font-size .8em
+	letter-spacing .08em
+	color colorWhite
+	line-height 1.8
+.font_09_black
+	font-size .97em
+	letter-spacing .09em
+	color colorBlack
+	line-height 2	
+.highlight
+	color colorBlue
+	font-weight 300
+
+	
+h2.sectionTitle
+		color colorBlack
+		font-family 'Noto Sans TC', sans-serif
+		font-weight 700
+		font-size 1.5em
+		line-height lh=3em
+		text-align center	
+		position relative
+		width 140px
+		left 50%
+		margin-left -(@width / 2)
+		margin-top 80px
+		margin-bottom 20px
+		&:before
+			content ''
+			display block
+			position absolute
+			width calc(45vw - 70px)
+			height .14em
+			background-color colorBlue
+			left calc(70px - 45vw)
+			top (lh/2-@height/2)
+		&:after
+			content ''
+			display block
+			position absolute
+			width calc(45vw - 70px)
+			height .14em
+			background-color colorBlue
+			right calc(70px - 45vw)
+			top (lh/2-@height/2)
+//loading animation
+
+.loading_ani
+	flex none
+	display flex
+	width 100%
+	height 120px
+	justify-content center
+	
+	div
+  		width 20px
+  		height 20px
+  		margin-top 30px
+  		background-color colorBlue
+  		//1,0,0,1
+  		//animation loading_ani 2s infinite cubic-bezier(1,.42,.44,.99)
+  		animation loading_ani 2s infinite cubic-bezier(1,0,0,1)
+
+
+
+
+@keyframes loading_ani {
+  0% {
+    transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(900px) rotateX(-180.1deg) rotateY(0deg) scaleY(.8) scaleX(.8);
+    background:#A0F3D8;
+  }
+  100% {
+    transform: perspective(900px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 999px) and (min-width: 640px)
+	.font_1_black
+		font-size 1.2em
+	.font_06_gray92
+		font-size .8em
+	.font_06_black
+		font-size .8em
+	.font_08_black
+		font-size .9em
+	
+	
+@media screen and (max-width: 639px)
+	.font_1_black
+		font-size 1.4em
+	.font_06_gray92
+		font-size 1em
+	.font_06_black
+		font-size 1em
+	.font_08_black
+		font-size 1.1em
