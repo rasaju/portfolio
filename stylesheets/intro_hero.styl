@@ -6,10 +6,13 @@ colorBlue = #1dc5c9;
 colorBlueLight = #3fd9da;
 colorGray = #e8e8e8;
 colorShadow = rgba(16,158,155,.35)
+colorShadowBlack = rgba(0,0,0,.15)
 
 
 body
-    background-color colorWhite
+    background-color #e1e1e1
+    overflow-y scroll
+    overflow-x hidden 
     div.padding
         margin 30px 0 0  50px
     h1.pageTitle
@@ -160,4 +163,34 @@ body
         position relative
         box-shadow 2px 5px 15px -4px colorShadow
 
-
+.uidemo_new_version
+    width 100vw
+    position relative
+    display flex
+    margin-top 5vw
+    padding 40px
+    justify-content center
+    img
+        display block
+        flex none
+        width 20vw
+        height 39.31vw
+        margin 0 10px
+        z-index 4
+        position relative
+        box-shadow 2px 5px 15px -4px colorShadowBlack
+.column_list
+    width 100vw
+    position relative
+    display flex
+    margin-top 5vw
+    padding 40px
+    flex-flow column
+    align-items center
+.singlePic
+    flex none
+    width 60vw
+    min-width 300px
+    position relative
+    box-shadow 2px 5px 15px -4px colorShadowBlack
+    margin-bottom 80px
