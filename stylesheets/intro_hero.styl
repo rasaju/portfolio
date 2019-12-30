@@ -26,10 +26,26 @@ body
     a.btn_blue_m
         position relative
         display inline-block
-        margin 0 .5em
-        line-height 1.5em
+        line-height 1.8em
         text-align center
         transition .3s ease
+        &.back
+            width 10vw
+            left 50%
+            margin-left -5vw
+            margin-bottom 30vw
+            margin-top 50px
+        &:after
+                content ''
+                display block
+                position absolute
+                width 0%
+                height 1px
+                left 50%
+                bottom -2px
+                background-color colorBlue
+                opacity 0
+                transition .5s ease
         &:hover,:active
             color colorBlue
             &:after
@@ -41,6 +57,8 @@ body
                 left 3%
                 bottom -2px
                 background-color colorBlue
+                opacity 1
+                transition .5s ease
 
 
 #header_hero
@@ -103,8 +121,9 @@ body
         p
             width 60%
             height auto
-            line-height 1.5
+            line-height 1.8
             text-align justify
+            min-width 300px
     &:after
         flex none
         z-index 1
@@ -116,7 +135,6 @@ body
         width 60vw
         hieght 0
         padding-top 1.04* @width
-        min-width 300px
         background-image url('../images/section_bg_blue.jpg')
         background-repeat no-repeat
         background-size 100% auto
@@ -141,7 +159,6 @@ body
         width 60vw
         hieght 0
         padding-top 1.04* @width
-        min-width 300px
         background-image url('../images/section_bg_black.jpg')
         background-repeat no-repeat
         background-size 100% auto
@@ -188,9 +205,77 @@ body
     flex-flow column
     align-items center
 .singlePic
+    display block
     flex none
     width 60vw
     min-width 300px
     position relative
     box-shadow 2px 5px 15px -4px colorShadowBlack
     margin-bottom 80px
+.sec_intro_gray
+    position relative
+    width 100vw
+    height auto
+    margin-top 10vw
+    padding 30px 52px
+    display flex
+    align-content center
+    &>div:first-child
+        h2 
+            margin-bottom 30px
+.underline
+    border-bottom-style solid
+    border-bottom-color colorBlue
+    border-bottom-width 1px
+    padding-bottom 0.1em
+
+@media screen and (max-width: 999px) and (min-width: 640px)
+    .sec_intro
+        padding 30px 20px
+        &>div:first-child
+            p
+                width 75%
+                min-width 400px
+         &:after
+            top 90%
+    .uidemo_new_version
+        width 100vw
+        position relative
+        display flex
+        margin-top 5vw
+        padding 40px
+        justify-content center
+        img
+            display block
+            flex none
+            width 20vw
+            height 39.31vw
+            margin 0 10px
+            z-index 4
+            position relative
+            box-shadow 2px 5px 15px -4px colorShadowBlack
+
+@media screen and (max-width: 639px)
+    body
+        div.padding
+            margin 30px 0 0  20px
+        h1.pageTitle
+            position relative
+            display inline-block
+            font-size 2em
+            margin-top 30px
+            margin-left 20px
+            color colorBlue
+            z-index 99
+        a.btn_blue_m
+            &.back
+                width 8em
+                margin-left -4em
+    .sec_intro
+        padding 30px 20px
+        &>div:first-child
+            p
+                width 85%
+                min-width 260px
+         &:after
+            top 90%

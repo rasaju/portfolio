@@ -19,7 +19,7 @@ colorShadow = rgba(16,158,155,.35)
         h2 
             margin-bottom 30px
         p
-            line-height 1.5
+            line-height 1.8
             text-align justify
     &>div:nth-child(2)
         flex 2 1
@@ -31,5 +31,47 @@ colorShadow = rgba(16,158,155,.35)
             width 100%
             height auto
             box-shadow 2px 5px 15px -4px colorShadow
-        
-
+@media screen and (max-width: 999px) and (min-width: 640px)
+    .sec_draw
+        margin-top 10vw
+        display flex
+        padding 20px 20px
+        align-content center
+        &>div:first-child
+            flex 3 1
+            padding-right 30px
+            p
+                text-align left
+        &>div:nth-child(2)
+            flex 1 1
+            min-width 300px
+            line-height 100%
+            vertical-align middle
+@media screen and (max-width: 639px)
+    .sec_draw
+        margin-top 10vw
+        display flex
+        padding 20px 0
+        align-content center
+        &>div:first-child
+            flex none
+            width 100vw
+            padding-right 7vw
+            padding-left 7vw
+            h2 
+                margin-bottom 30px
+            p
+                text-align left
+        &>div:nth-child(2)
+            flex none
+            width 100vw
+            min-width 300px
+            line-height 100%
+            vertical-align middle
+            padding-right 20vw
+            padding-left 20vw
+            img
+                position relative
+                width 100%
+                height auto
+                box-shadow 2px 5px 15px -4px colorShadow
