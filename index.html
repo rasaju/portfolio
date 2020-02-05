@@ -10,22 +10,46 @@
   <link rel="stylesheet" href="stylesheets/minireset.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/reset_custom.css">
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:300,400" rel="stylesheet"> -->
+  <!--<link href="https://fonts.googleapis.com/css?family=Gelasio:400,400i,500,500i,600,600i,700,700i|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+TC:300,400,600,700,900|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">-->
   <link rel="stylesheet" type="text/css" href="stylesheets/font_color.css">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:600,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:600,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Gelasio:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="stylesheets/videoLoad.css">
   <link rel="stylesheet" href="stylesheets/index.css">
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/vframeplayer.min.js"></script>
-  <!-- header -->
-  <!--<script src="javascripts/header_scroll_effect.js" type="text/javascript" charset="utf-8" async defer></script>-->
-  <!-- footer -->
-  <!--<script src="javascripts/footer.js"></script>--> 
-  <!--modernizr only csstransition & touch event -->
-<!--<script src="javascripts/modernizr-custom_1.js" type="text/javascript" charset="utf-8" async defer></script>-->
-
-<script src="js/videoLoad.js"></script>	
+  <script type="text/javascript" src="js/jquery.preload.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    
+    (function () {
+      axios({
+        method: "get",
+        url: "json/preload.json",
+        responseType: 'json'
+    }).then(function (response) {
+      var activitys = response.data;
+      var imgUrl = "";
+      activitys.forEach(function(response){
+        imgUrl += "\'" + response.src + "\'" + ",";
+        //imgUrl += `"${response.src}",`;
+      });
+      imgUrl = imgUrl.substr(0, imgUrl.length - 1);
+      console.log("imgUrl="+imgUrl);
+    
+        console.log(response);
+        console.log(typeof(imgUrl));
+        a = String(imgUrl);
+        $.preload(a);
+    });
+})();
+//   $.preload( '/img/space.gif',
+//   '/img/loading.gif',
+//   '/img/header-bg.png',
+//   '/img/avatar.jpg'
+// );
+  </script>
 </head>
 <body>
   <div class="btnFixRight">

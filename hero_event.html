@@ -11,6 +11,7 @@
   <!-- 自訂 reset 基礎元件-->
   <link rel="stylesheet" type="text/css" href="stylesheets/reset_custom.css">
   <!-- 英文字型與色彩設定 -->
+  <link href="https://fonts.googleapis.com/css?family=Gelasio:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:300,400" rel="stylesheet"> -->
   <link rel="stylesheet" type="text/css" href="stylesheets/font_color.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:600,700" rel="stylesheet">
@@ -21,7 +22,7 @@
   <link rel="stylesheet" href="stylesheets/intro_hero.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/letter_ani.css">
   <link rel="stylesheet" href="stylesheets/zero_ani.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="js/vframeplayer.min.js"></script>
@@ -29,22 +30,162 @@
 
 </head>
 <body>
-<div class="column_list">
+  <h1 class="pageTitle font_superTitle">HERO Compaign</h1>
+<div class="sec_intro_gray">
+    <div class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <h2 class="font_1_blue">與行銷團隊的合作密切</h2>
+            <p class="font_08_black">HERO 在公司定位中，每月每季的銷售目標是團隊要一起承擔的，因此公司平均每月都會有行銷活動。設計師經常是產品決策、行銷、客服銷售、開發中間的重要溝通渠道。每一次專案結束，我都會自我檢討有沒有能夠優化的，希望合作到的夥伴都能感受到<span class="underline"">自己是被尊重的、且能不用拘束的對專案提供意見，付出的努力沒有被浪費。</span>從視覺風格、專案形式，甚至是字串的口氣和語意調整，我們都樂於討論，小巧的團隊衍生出好的默契和節奏，並且共同觀察成效和改進。</p> 
+    </div>    
+</div>
+<!-----------------------豬年首頁-------------------->
+<div class="htmlPic">
+  <div class="slider">
+    <!-- computer&coin -->
+    <div class="zero_ani">
+      <img src="images/zero_ani_red/ani_man_pink.png" alt="">
+      <img src="images/zero_ani_red/ani_coin_pink.png" alt="">
+      <img src="images/zero_ani_red/ani_computer_pink.png" alt="">
+      <img src="images/zero_ani_red/ani_keyboard_pink.png" alt="">
+      <img src="images/zero_ani_red/ani_finish_pink.png" alt="">
+      
+    </div>
+    <!-- wording & timer -->
+    <div class="zero_infro">
+      <div class="zero_wording">
+        <img src="images/zero_ani_red/slider_wording_n.png" alt="">
+        <img src="images/zero_ani_red/slider_wording_light.png" alt="">
+      </div>
+      <div id="timer">
+        倒數
+        <span id="days"></span>天
+        <span id="hours"></span>時
+        <span id="minutes"></span>分
+        <span id="seconds"></span>秒
+      </div>
+    </div>
+    <div><a href="#"><p>了解詳情</p></a></div>
+    
+  </div>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script>
+    //timer
+      var timer;
   
+  var compareDate = new Date();
+  compareDate.setDate(compareDate.getDate() + 30); //just for this demo today + 7 days
+  
+  timer = setInterval(function() {
+    timeBetweenDates(compareDate);
+  }, 1000);
+  
+  function timeBetweenDates(toDate) {
+    var dateEntered = toDate;
+    var now = new Date();
+    var difference = dateEntered.getTime() - now.getTime();
+  
+    if (difference <= 0) {
+  
+      // Timer done
+      clearInterval(timer);
+    
+    } else {
+      
+      var seconds = Math.floor(difference / 1000);
+      var minutes = Math.floor(seconds / 60);
+      var hours = Math.floor(minutes / 60);
+      var days = Math.floor(hours / 24);
+  
+      hours %= 24;
+      minutes %= 60;
+      seconds %= 60;
+  
+      $("#days").text(days);
+      $("#hours").text(hours);
+      $("#minutes").text(minutes);
+      $("#seconds").text(seconds);
+    }
+  }
+    </script>
+</div>
+
+<!------------------------------------------->
+<div class="sec_intro_gray">
+  <div class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+          <h2 class="font_1_blue">切版與動畫</h2>
+          <p class="font_08_black">在部分專案裡，我會先完成區塊切版（如上下圖例），再交給前端塞入頁面中。有時也會用 Bodymovin 做好動畫元素再交給前端切版。其他情況相對簡單的動畫也會用 Apng 、序列圖檔，跟僅以文字寫下規格等方式進行。</p> 
+  </div>    
+</div>
+<!------------------豬年紅包------------------>
+<div class="htmlPic">
+  <div class="sec_letter">
+    <div class="letter_ani" id="letterAni">
+      <img class="readme"  src="images/letter_ani/letter_readme.png" alt="">
+      <img class="handR thumb" src="images/letter_ani/thumb_right.png" alt="">
+      <img class="handL thumb" src="images/letter_ani/thumb_left.png" alt="">
+      <img class="letter open" src="images/letter_ani/letter_open.png" alt="">
+      <img class="letter cover" src="images/letter_ani/letter_cover.png" alt="">
+      <div class="letter paper content" > 
+        <div class="campaign">
+          <p >輸入<input class="promoCode_onLetter" type="text" readonly="" spellcheck="false" value="v4a7">即享 2 套 81 折！</p>
+        </div>
+        <div class="quote" id="letterQuote">
+        </div>
+        <a href="#">使用優惠</a>
+  
+      </div>
+      <img class="letter paper" src="images/letter_ani/letter_paper.png" alt="">
+      <img class="letter bottom" src="images/letter_ani/letter_bottom.png" alt="">
+      <img class="handR" src="images/letter_ani/hang_right.png" alt="">
+      <img class="handL" src="images/letter_ani/hang_left.png" alt="">
+    </div>
+    <img class="pig left" src="images/letter_ani/pig_left.png" alt="">
+    <img class="pig right" src="images/letter_ani/pig_right.png" alt="">
+  
+  </div>
+  <script src="https://code.jquery.com/jquery.js"></script>
+    <script>
+      // quote random word
+    window.onload = function randomPage(){
+      var words = [
+          "<p>Improving yourself will not be easy, but it will be worth it.</p><p>勇敢挑戰吧，HERO 陪你達成學好英文的新希望！</p>",
+      "<p>If it doesn't challenge you, it won't change you</p><p>HERO 帶你克服盲點，新的一年用英文擴展更多機會吧！</p>",
+      "<p>It requires hard work to give off an appearance of effortlessness</p><p>必須非常努力才能看起來毫不費力，讓 HERO 陪你堅持下去吧！</p>",
+      "<p>Pain is temporary. Quitting lasts forever.</p><p>總是無力唸英文？快跟著 HERO 享受突飛猛進的成就感吧</p>",	
+        ];
+        
+        var chooseQuote = words[Math.floor(Math.random() * words.length)];
+      var randomWord = document.getElementById('letterQuote');
+        randomWord.innerHTML = chooseQuote
+      };
+      
+    
+    </script>
+</div>
+<!------------------------------------------->
+
+  <div class="bodymovinPic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300">
+    <img src="images/event/e_06_a.jpg" alt="">
+    <div class="bodymovin" data-animation-path="animation" data-anim-loop="true" data-name="job"></div>
+  </div>
+
+<div class="column_list">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_01_a.png" alt="">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_01_b.png" alt="">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_02_a.png" alt="">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_02_b.png" alt="">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_03_a.png" alt="">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_03_b.png" alt="">
-    <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_04.png" alt="">
     <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_05.png" alt="">
+    <img class="singlePic aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="300" src="images/event/e_04.png" alt="">
 </div>
-  
+  <div class="video_default">
+    <div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/389297950?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  </div>
 
 
     <a href="index.html" class="btn_blue_m" style="margin-top:50px;width:10vw;text-align: center;left:50%;margin-left:-5vw;margin-bottom: 30vw;">Back to List</a>
- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/lottie.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
 </script> 

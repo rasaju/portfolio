@@ -1,0 +1,367 @@
+
+//need delete start
+body
+  background #f5f5f5
+
+*
+    margin 0
+    padding 0
+
+//need delete end
+
+
+.sec_letter
+    position relative
+    width 100vw
+    height 500px
+    background-color #1dc5c9
+    background-image url('../images/letter_ani/bg_yellow.png')
+    background-size cover
+    background-position center center
+    overflow hidden
+    .pig
+        display block
+        position absolute
+        max-height 540px
+        min-height 320px
+        width auto
+        &.left
+            height 40vw
+            bottom -20px
+            left -3vw
+            transform translate(-3%,3%)
+            animation pigLMove 2s ease  forwards
+        &.right
+            height 36vw
+            bottom -20px
+            right -3vw
+            transform translate(3%,3%)
+            animation pigRMove 2s ease  forwards
+    .letter_ani
+        position absolute
+        height 100%
+        width auto
+        max-width 630px
+        z-index 2
+        left 0
+        right 0
+        margin auto
+        transition .5s ease
+        img
+            display block
+            position absolute
+        .readme
+            width 180px
+            height auto
+            bottom 0
+            right 12%
+            z-index 13
+            opacity 1
+            transform-origin right top
+            animation readmeMove 1s ease-in  infinite
+        .letter
+            &.bottom,&.cover
+                width 86%
+                height auto
+                left 7%
+                top 26%
+            &.cover
+                z-index 12
+            &.bottom
+                z-index 4
+            &.open
+                z-index 10
+                height auto
+                width 7.9%
+                left 85%
+                top 26%
+            &.paper
+                z-index 9
+                width 82%
+                height auto
+                left 9%
+                top 30%
+                &.content
+                    opacity 0
+                    position absolute
+                    hieght 52%
+                    top 30%
+                    z-index 16
+                    padding 10px
+                    color #3c3c3c
+                    box-sizing border-box
+                    text-align center
+                    display flex
+                    flex-flow column
+                    align-items center
+                    justify-content center
+                    .campaign
+                        font-size 1em
+                        font-weight 600
+                        letter-spacing .5
+                        line-height 2em
+                        margin-bottom 5px
+                        .promoCode_onLetter 
+                            border-color #f54d4d
+                            border-style dashed
+                            padding 0 .1em
+                            width 3em
+                            font-size 1em
+                            font-weight 700
+                            color #f54d4d
+                            text-align center
+                            margin 0 .3em
+                    .quote
+                        margin-bottom 10px
+                        p:nth-child(1)
+                            font-size 1.2em
+                            font-weight 600
+                        p:nth-child(2)
+                            font-size .9em
+                            font-weight 500
+                            margin-top 5px
+                    a
+                        flex none
+                        width 40%
+                        min-width 100px
+                        height 3em
+                        border-radius 1.5em
+                        background-color #f54d4d
+                        color #fff
+                        text-align center
+                        text-decoration none 
+                        line-height 3em
+                        letter-spacing .5
+                        font-size 1em
+                        box-sizing border-box
+                        &:hover,:active
+                            background-color #fff
+                            color #f54d4d
+                            line-height 2.8em
+                            border .1em solid #f54d4d
+                            
+        .handL,.handR
+            width 30%
+            height auto
+            z-index 3
+            top -16%
+            &.thumb
+                z-index 14
+        .handL
+            left 18%
+        .handR
+            left 52%
+    #letterAni
+        animation letterShow 1s ease
+// web -> hover animate mobile ->click animate
+    .letter_ani:hover
+        .readme
+            opacity 0
+        .handR
+            animation RhandMove .3s 0s cubic-bezier(.08,.66,.62,.57) forwards
+            &.thumb
+                transform-origin: left top
+                animation RthumbMove .3s 0s cubic-bezier(.08,.66,.62,.57) forwards
+        .handL
+            animation handMove .5s .7s cubic-bezier(.08,.66,.62,.57) forwards
+            &.thumb
+                transform-origin: right top
+                animation thumbMove .5s .7s cubic-bezier(.08,.66,.62,.57) forwards
+        .letter
+            &.open
+                transform-origin 100% center
+                animation openLetter .5s .3s cubic-bezier(.77,.02,.91,.75),openMove .5s .8s cubic-bezier(.08,.66,.62,.57) forwards
+            &.cover,&.bottom
+                animation coverMove .5s .8s cubic-bezier(.08,.66,.62,.57) forwards
+            &.paper
+                z-index 9
+                width 82%
+                height auto
+                left 8%
+                top 30%
+                transform-origin left
+                transform scaleX(1) translate(-1%,0)
+                animation paperRight .8s .8s cubic-bezier(.08,.66,.62,.57) forwards,paperPop 1.5s 1.6s cubic-bezier(.55,.06,.45,1.03) forwards
+                &.content
+                    opacity 0
+                    z-index 16
+                    height 52%
+                    animation showContent 1.5s 3.1s cubic-bezier(.08,.66,.62,.57) forwards
+
+@keyframes pigLMove{
+    0%{transform:translate(-3%,3%);}
+    100%{transform:translate(0,0);}
+} 
+@keyframes pigRMove{
+    0%{transform:translate(3%,3%) ;}
+    100%{transform:translate(0,0);}
+} 
+@keyframes letterShow{
+    0%{transform:translate(0,-2%);}
+    50%{transform:translate(0,0);}
+    100%{transform:translate(0,0);}
+} 
+
+
+@keyframes readmeMove{
+    0%{transform: translate(0,0) rotate(0deg);}
+    55%{transform: translate(-1%,-1%) rotate(-2deg);}
+    100%{transform: translate(0,0) rotate(0deg);}
+     
+} 
+@keyframes openLetter{
+    0%{transform:scaleX(1);left:85%;}
+    100%{transform:scaleX(-1);left:84%;}
+} 
+@keyframes openMove{
+    0%{transform:scaleX(-1);left:84%;}
+    100%{transform:scaleX(-1);left:79%;}
+} 
+@keyframes handMove{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(-5%,0);}
+}
+@keyframes thumbMove{
+    0%{transform:translate(0,0) rotate(0deg);}
+    30%{transform:translate(-1%,0) rotate(-2deg);}
+    100%{transform:translate(-5%,0) rotate(0deg);}
+}
+@keyframes RhandMove{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(3%,0);}
+}
+@keyframes RthumbMove{
+    0%{transform:translate(0,0) rotate(0deg);}
+    30%{transform:translate(1%,0) rotate(3deg);}
+    100%{transform:translate(3%,0) rotate(0deg);}
+}
+ @keyframes coverMove{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(-5%,0);}
+}  
+@keyframes paperRight{
+    0%{z-index:9;transform:scaleX(1),translate(-1%,0);}
+    80%{z-index:11;transform:scaleX(0.3),translate(-1%,0);}
+    100%{z-index:11;transform:scaleX(0.3),translate(0,0);}
+} 
+@keyframes paperPop{
+    0%{z-index:11;transform-origin: center center;transform:scale(1) translate(0,0) rotate(0deg);}
+    30%{z-index:13;transform-origin: center center;transform:scale(1.05) translate(-2%,-2%) rotate(-5deg);}
+    80%{z-index:13;transform-origin: center center;transform:scale(1) translate(-1%,-1%) rotate(3deg);}
+    100%{z-index:13;transform-origin: center center;transform:scale(1) translate(0,0) rotate(0deg);}
+}  
+@keyframes showContent{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}                 
+
+
+@media screen and (max-width: 1024px)and (min-width: 680px) 
+    .sec_letter
+        height 400px
+        .pig
+            max-height 440px
+            width auto
+            &.left
+                height 46vw
+                bottom -20px
+                left -13vw
+            &.right
+                height 40vw
+                bottom -20px
+                right -10vw
+        .letter_ani
+            height 100%
+            width auto
+            max-width 500px
+
+    .letter_ani:active
+        .letter
+            &.open
+                transform-origin 100% center
+                animation openLetter .5s 0s cubic-bezier(.77,.02,.91,.75),openMove .5s .5s cubic-bezier(.08,.66,.62,.57) forwards
+            &.cover,&.bottom
+                animation coverMove .5s .5s cubic-bezier(.08,.66,.62,.57) forwards
+            &.paper
+                z-index 9
+                width 82%
+                height auto
+                left 8%
+                top 30%
+                transform-origin left
+                transform scaleX(1) translate(-1%,0)
+                animation paperRight .8s .5s cubic-bezier(.08,.66,.62,.57) forwards,paperPop 1.5s 1.3s cubic-bezier(.55,.06,.45,1.03) forwards
+                &.content
+                    opacity 0
+                    z-index 16
+                    height 52%
+                    animation showContent 1.5s 2.8s cubic-bezier(.08,.66,.62,.57) forwards
+ 
+@media screen and (max-width: 679px)
+    .sec_letter
+        height 90vw
+        min-height 320px
+        .pig
+            display none
+        .letter_ani
+            height 100%
+            width auto
+            .handL,.handR
+                top -10%
+            .letter.paper.content
+                padding 5px
+                 .campaign
+                    font-size .8em
+                    font-weight 600
+                    letter-spacing .5
+                    line-height 2em
+                    margin-bottom 5px
+                     .promoCode_onLetter
+                        border .5pt 
+                        padding 0 .1em
+                        font-size .8em
+                        margin 0 .2em
+                .quote
+                    margin-bottom 5px
+                    p:nth-child(1)
+                        font-size .8em
+                        font-weight 600
+                    p:nth-child(2)
+                        font-size .8em
+                        font-weight 500
+                        margin-top 5px
+                a
+                    flex none
+                    width 30%
+                    min-width 100px
+                    height 2em
+                    border-radius 1em
+                    line-height 2em
+                    letter-spacing .5
+                    font-size .8em
+                    &:hover
+                        line-height 1.8em
+    .letter_ani:active
+        .letter
+            &.open
+                transform-origin 100% center
+                animation openLetter .5s 0s cubic-bezier(.77,.02,.91,.75),openMove .5s .5s cubic-bezier(.08,.66,.62,.57) forwards
+            &.cover,&.bottom
+                animation coverMove .5s .5s cubic-bezier(.08,.66,.62,.57) forwards
+            &.paper
+                z-index 9
+                width 82%
+                height auto
+                left 8%
+                top 30%
+                transform-origin left
+                transform scaleX(1) translate(-1%,0)
+                animation paperRight .8s .5s cubic-bezier(.08,.66,.62,.57) forwards,paperPop 1.5s 1.3s cubic-bezier(.55,.06,.45,1.03) forwards
+                &.content
+                    opacity 0
+                    z-index 16
+                    height 52%
+                    animation showContent 1.5s 2.8s cubic-bezier(.08,.66,.62,.57) forwards
+
+
+        

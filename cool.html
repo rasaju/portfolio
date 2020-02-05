@@ -11,6 +11,8 @@
   <!-- 自訂 reset 基礎元件-->
   <link rel="stylesheet" type="text/css" href="stylesheets/reset_custom.css">
   <!-- 英文字型與色彩設定 -->
+  <link href="https://fonts.googleapis.com/css?family=Gelasio:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:600&display=swap" rel="stylesheet">
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:300,400" rel="stylesheet"> -->
   <link rel="stylesheet" type="text/css" href="stylesheets/font_color.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:600,700" rel="stylesheet">
@@ -19,6 +21,7 @@
   <link rel="stylesheet" href="stylesheets/videoLoad.css">
   <link rel="stylesheet" href="stylesheets/index.css">
   <link rel="stylesheet" href="stylesheets/intro_hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/vframeplayer.min.js"></script>
@@ -33,6 +36,13 @@
 <script src="js/videoLoad.js"></script>	
 </head>
 <body>
+  <h1 class="pageTitle font_superTitle">Crowdfunding Page</h1>
+  <div class="sec_intro_gray">
+      <div class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+              <h2 class="font_1_blue">第一哩路走得好且快，帶來士氣提振</h2>
+              <p class="font_08_black">哥倫布是 VoiceTube 合作課程募資的第一個網紅，當時設計了方便重用的模板，讓後續其他募資專案時，能在基石上前進。時程上因為很緊湊，先設計無圖稿讓前端先刻，同時我繼續做圖並等資料和文案，校對完成後一次塞進已經完成的框架，同時開工但避免資源浪費的做法。視覺風格上針對哥倫布的特質和受眾去設計，專案獲得很大的迴響上課人數超過目標六倍，讓團隊士氣提振許多！</p> 
+      </div>    
+  </div>
 <div class="column_list">
   
     <div style="width:100vw;text-align:center;">
@@ -44,6 +54,7 @@
   
     <a href="index.html" class="btn_blue_m" style="margin-top:50px;width:10vw;text-align: center;left:50%;margin-left:-5vw;margin-bottom: 30vw;">Back to List</a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
     <script>
       AOS.init();
     </script>

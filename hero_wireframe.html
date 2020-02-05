@@ -11,6 +11,7 @@
   <!-- 自訂 reset 基礎元件-->
   <link rel="stylesheet" type="text/css" href="stylesheets/reset_custom.css">
   <!-- 英文字型與色彩設定 -->
+  <link href="https://fonts.googleapis.com/css?family=Gelasio:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:300,400" rel="stylesheet"> -->
   <link rel="stylesheet" type="text/css" href="stylesheets/font_color.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:600,700" rel="stylesheet">
@@ -21,28 +22,49 @@
   <link rel="stylesheet" href="stylesheets/intro_hero.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/letter_ani.css">
   <link rel="stylesheet" href="stylesheets/zero_ani.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/vframeplayer.min.js"></script>
-  <!-- header 捲動時縮小 -->
-  <!--<script src="javascripts/header_scroll_effect.js" type="text/javascript" charset="utf-8" async defer></script>-->
-  <!-- footer 向上捲動時浮現 -->
-  <!--<script src="javascripts/footer.js"></script>--> 
-  <!--modernizr 只含csstransition & touch event -->
-<!--<script src="javascripts/modernizr-custom_1.js" type="text/javascript" charset="utf-8" async defer></script>-->
-<!-- slider daily pick -->
-<!--<script src="javascripts/slider_dailypick.js" type="text/javascript" charset="utf-8" async defer></script>-->
-<script src="js/videoLoad.js"></script>	
+  <script src="js/videoLoad.js"></script>	
 </head>
 <body>
+  <h1 class="pageTitle font_superTitle">Wireframe & Sitemap</h1>
+<div class="sec_intro_gray">
+    <div class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <h2 class="font_1_blue">畫面之外的體驗，事前是能規劃的</h2>
+            <p class="font_08_black">「就先做，工程師有問題的話，再改就好了。」「就先推版上去，有用戶反應再說。」「這是工程師寫的，出什麼問題我也不知道。」這都是我聽過的說法。但我始終相信，可能有更省力的協作方式。一直很幸運的是，後端、前端工程師願意說明，讓設計 Flow 的時候，可以更清楚每個環節，避免事後遇到問題時，修改單一節點可能產生的矛盾與漏洞。</p> 
+    </div>    
+</div>
 <div class="column_list">
 
     <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_0.png" alt="">
     <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_1.png" alt="">
     <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_2.png" alt="">
-    <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_3.png" alt="">
-    <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_4.jpg" alt="">
-    <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_5.png" alt="">
+    <img class="longPic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_3.png" alt="">
+  </div>
+<div class="sec_intro_gray">
+    <div class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <h2 class="font_1_blue">畫面溝通用的文件</h2>
+        <p class="font_08_black">模組化、有規律的設計才能有乾淨的前端結構，進而才會效能好、也好維護。因此我跟前端工程師們討論時，會盡可能重用已經套用的框架、套件、流變規則來減輕產品的負擔、縮短開發時程。圖例是之前只取 Bootstrap 的格線系統來微調成自訂樣式。（ 不過 CSS Grid 跟 Flex 這麼好用，早已經沒在用了 ） </p> 
+    </div>
+  </div>
+<div class="column_list">
+    <img class="longPic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_4.jpg" alt="">
+    <img class="longPic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_5.png" alt="">
+  </div>
+<div class="sec_intro_gray">
+    <div class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+      <h2 class="font_1_blue">為跨平台的產品繪製可迭代的 Sitemap </h2>
+      <p class="font_08_black">開發時可能因平台限制，或迫於突發狀況、資源不足、規格不齊全的黑洞等原因，以 MVP 的方式單一迭代部分平台的功能，但隨著時間流逝、人員離職都會變成考古。“小步快跑”後來就真的只跑了一小步沒再接著跑，己所不欲勿施於人，為了不要成為炸彈超人，有努力的生了一些規格文件。</p> 
+    </div> 
+  </div>
+<div class="column_list">
+    <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_6.png" alt="">
+    <img class="singlePic" class="aos-item" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src="images/wireframe/w_7.png" alt="">
+</div>  
+    
+
     
 </div>
   
