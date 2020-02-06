@@ -80,12 +80,12 @@ body
         &:nth-child(2)
             z-index 4
             opacity 0
-            animation slowUp .8s 1.8s cubic-bezier(.42,.06,.58,1.19) forwards,shake 2s 2.6s ease-in-out infinite
+            animation slowUp .8s 1.2s cubic-bezier(.42,.06,.58,1.19) forwards,shake 2s 2.6s ease-in-out infinite
             transform translateY(0px)
         &:nth-child(3)
             z-index 3
             opacity 0
-            animation fastUp .8s 1s cubic-bezier(.42,.06,.58,1.19) forwards
+            animation fastUp .8s .6s cubic-bezier(.42,.06,.58,1.19) forwards
             transform translateY(0px)
         &:last-child
             z-index 2
@@ -224,6 +224,7 @@ body
 .bodymovinPic
     width 60vw
     height 32vw
+    min-width 300px
     position relative
     top 0
     left 0
@@ -251,7 +252,14 @@ body
     top 0
     left 0
     margin 80px 0
-
+.fullScreenBg
+    width 100vw
+    height 40vw
+    position relative
+    top 0
+    left 0
+    background-size cover
+    background-position top center 
 
 
 .sec_intro_gray
@@ -270,13 +278,21 @@ body
     border-bottom-color colorBlue
     border-bottom-width 1px
     padding-bottom 0.1em
+a.underline.highlight
+    color colorBlue
+    font-weight 700
 .video_default
     position relative
-    width 60vw
-    height (800/640)*60vw
+    width 30vw
+    height auto
+    min-width 300px
+    right 0
+    left 0
+    margin auto
+    padding-bottom 40px
     &>iframe
         display block
-        
+
 @media screen and (max-width: 999px) and (min-width: 640px)
     .sec_intro
         padding 30px 20px
@@ -302,7 +318,9 @@ body
             z-index 4
             position relative
             box-shadow 2px 5px 15px -4px colorShadowBlack
-
+    .sec_intro_gray
+        width 70vw
+        padding 30px
 @media screen and (max-width: 639px)
     body
         div.padding
@@ -318,6 +336,8 @@ body
             &.back
                 width 8em
                 margin-left -4em
+    .column_list 
+        padding 0
     .sec_intro
         padding 30px 20px
         &>div:first-child
@@ -326,3 +346,19 @@ body
                 min-width 260px
          &:after
             top 90%
+    .singlePic
+        width 85vw
+    
+    .bodymovinPic
+        width 85vw
+        &>img:first-child
+            width 85vw
+            height 34.96vw
+        &>div.bodymovin
+            left 8.287vw
+            width 48.16vw
+            height 34.96vw
+    .sec_intro_gray
+        width 80vw
+        padding 30px
+

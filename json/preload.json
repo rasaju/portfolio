@@ -1,14 +1,14 @@
 [
     {
-        "src": "/images/header_hero/header_part_bg.jpg"
+        "src": "images/header_hero/header_part_bg.jpg"
     },
     {
-        "src": "/images/header_hero/header_part_mac.jpg"
+        "src": "images/header_hero/header_part_mac.png"
     },
     {
-        "src": "/images/header_hero/header_part_ui_a.jpg"
+        "src": "images/header_hero/header_part_ui_a.png"
     },
     {
-        "src": "/images/header_hero/header_part_ui_b.jpg"
+        "src": "images/header_hero/header_part_ui_b.png"
     }
 ]

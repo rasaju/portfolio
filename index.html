@@ -22,7 +22,6 @@
   <script type="text/javascript" src="js/jquery.preload.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
-    
     (function () {
       axios({
         method: "get",
@@ -32,26 +31,14 @@
       var activitys = response.data;
       var imgUrl = "";
       activitys.forEach(function(response){
-        imgUrl += "\'" + response.src + "\'" + ",";
-        //imgUrl += `"${response.src}",`;
+        imgUrl =  response.src ;
+        $.preload(imgUrl);
       });
-      imgUrl = imgUrl.substr(0, imgUrl.length - 1);
-      console.log("imgUrl="+imgUrl);
-    
-        console.log(response);
-        console.log(typeof(imgUrl));
-        a = String(imgUrl);
-        $.preload(a);
     });
 })();
-//   $.preload( '/img/space.gif',
-//   '/img/loading.gif',
-//   '/img/header-bg.png',
-//   '/img/avatar.jpg'
-// );
   </script>
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <div class="btnFixRight">
     <a href="https://drive.google.com/file/d/1OfBd9VQMcKcW2LXNQw8CpEf4DoAFPqkb/view?usp=sharing" target="_blank" id="btn_blue_R">Download CV</a>
   </div> 
@@ -72,7 +59,7 @@
         <div class="pic"></div>
         <h2>HERO Compaign</h2>
     </a>
-    <a href="wireframe.html" class="pageLink">
+    <a href="hero_wireframe.html" class="pageLink">
         <div class="pic"></div>
         <h2>Wireframe & Sitemap</h2>
     </a>
@@ -82,7 +69,7 @@
     </a>
     <a href="#" class="pageLink">
         <div class="pic"></div>
-        <h2>SeeNews Website Redesign</h2>
+        <h2>News Website Redesign</h2>
     </a>
     <a href="research.html" class="pageLink">
       <div class="pic"></div>
