@@ -1,5 +1,14 @@
 [
     {
+        "src": "images/cis/hero_logo_loop.png"
+    },
+    {
+        "src": "images/cis/draw.jpg"
+    },
+    {
+        "src": "images/cis/guide.jpg"
+    },
+    {
         "src": "images/header_hero/header_part_bg.jpg"
     },
     {
@@ -12,6 +21,15 @@
         "src": "images/header_hero/header_part_ui_b.png"
     },
     {
+        "src": "images/seenews/n_0.png"
+    },
+    {
+        "src": "images/section_bg_black.jpg"
+    },
+    {
+        "src": "images/section_bg_blue.jpg"
+    },
+    {
         "src": "images/ui_mobile/ui_app_04.png"
     },
     {
@@ -22,6 +40,204 @@
     },
     {
         "src": "images/ui_mobile/ui_app_03.png"
+    },
+    {
+        "src": "images/cool/cool_desktop.jpg"
+    },
+    {
+        "src": "images/newversion/m_01.png"
+    },
+    {
+        "src": "images/newversion/m_02.png"
+    },
+    {
+        "src": "images/newversion/m_03.png"
+    },
+    {
+        "src": "images/newversion/p01.png"
+    },
+    {
+        "src": "images/newversion/p02.png"
+    },
+    {
+        "src": "images/newversion/p03.png"
+    },
+    {
+        "src": "images/newversion/p04.png"
+    },
+    {
+        "src": "images/newversion/p05.png"
+    },
+    {
+        "src": "images/event/e_01_a.png"
+    },
+    {
+        "src": "images/event/e_01_b.png"
+    },
+    {
+        "src": "images/event/e_02_a.png"
+    },
+    {
+        "src": "images/event/e_02_b.png"
+    },
+    {
+        "src": "images/event/e_03_a.png"
+    },
+    {
+        "src": "images/event/e_03_b.png"
+    },
+    {
+        "src": "images/event/e_04.png"
+    },
+    {
+        "src": "images/event/e_05.png"
+    },
+    {
+        "src": "images/event/e_06_a.jpg"
+    },
+    {
+        "src": "images/research/r_banner.png"
+    },
+    {
+        "src": "images/research/r_0.png"
+    },
+    {
+        "src": "images/research/r_1.jpg"
+    },
+    {
+        "src": "images/research/r_2.jpg"
+    },
+    {
+        "src": "images/research/r_3.jpg"
+    },
+    {
+        "src": "images/research/r_4.jpg"
+    },
+    {
+        "src": "images/research/r_5.png"
+    },
+    {
+        "src": "images/research/r_6.jpg"
+    },
+    {
+        "src": "images/research/r_7.jpg"
+    },
+    {
+        "src": "images/research/r_8.png"
+    },
+    {
+        "src": "images/seenews/n_1.png"
+    },
+    {
+        "src": "images/seenews/n_3.png"
+    },
+    {
+        "src": "images/seenews/n_4.png"
+    },
+    {
+        "src": "images/seenews/n_5.png"
+    },
+    {
+        "src": "images/seenews/n_6.png"
+    },
+    {
+        "src": "images/wireframe/w_0.png"
+    },
+    {
+        "src": "images/wireframe/w_1.png"
+    },
+    {
+        "src": "images/wireframe/w_2.png"
+    },
+    {
+        "src": "images/wireframe/w_3.png"
+    },
+    {
+        "src": "images/wireframe/w_4.jpg"
+    },
+    {
+        "src": "images/wireframe/w_5.png"
+    },
+    {
+        "src": "images/wireframe/w_6.png"
+    },
+    {
+        "src": "images/wireframe/w_7.png"
+    },
+    {
+        "src": "images/zero_ani_red/ani_coin_pink.png"
+    },
+    {
+        "src": "images/zero_ani_red/ani_computer_pink.png"
+    },
+    {
+        "src": "images/zero_ani_red/ani_finish_pink.png"
+    },
+    {
+        "src": "images/zero_ani_red/ani_keyboard_pink.png"
+    },
+    {
+        "src": "images/zero_ani_red/ani_man_pink.png"
+    },
+    {
+        "src": "images/zero_ani_red/pattern_mi.png"
+    },
+    {
+        "src": "images/zero_ani_red/slider_wording_light.png"
+    },
+    {
+        "src": "images/zero_ani_red/slider_wording_n.png"
+    },
+    {
+        "src": "images/letter_ani/bg_yellow.png"
+    },
+    {
+        "src": "images/letter_ani/hang_left.png"
+    },
+    {
+        "src": "images/letter_ani/hang_right.png"
+    },
+    {
+        "src": "images/letter_ani/letter_bottom.png"
+    },
+    {
+        "src": "images/letter_ani/letter_cover_zero.png"
+    },
+    {
+        "src": "images/letter_ani/letter_cover.png"
+    },
+    {
+        "src": "images/letter_ani/letter_open.png"
+    },
+    {
+        "src": "images/letter_ani/letter_paper.png"
+    },
+    {
+        "src": "images/letter_ani/letter_readme_zero.png"
+    },
+    {
+        "src": "images/letter_ani/letter_readme.png"
+    },
+    {
+        "src": "images/letter_ani/pig_left.png"
+    },
+    {
+        "src": "images/letter_ani/pig_right.png"
+    },
+    {
+        "src": "images/letter_ani/thumb_left.png"
+    },
+    {
+        "src": "images/letter_ani/thumb_right.png"
     }
+
+
+
+    
+    
+
+
+
+    
 
 ]
