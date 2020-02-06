@@ -24,6 +24,8 @@ body
         color colorBlack
         z-index 99
         font-weight 400
+        &.white
+            color colorWhitePure
     a.btn_blue_m
         position relative
         display inline-block
@@ -60,7 +62,19 @@ body
                 background-color colorBlue
                 opacity 1
                 transition .5s ease
-
+        &.machix
+            color colorWhitePure
+            &:after
+                background-color colorWhitePure
+            &:hover,:active
+                color #efea80
+                &:after
+                    background-color #efea80
+        &.machix.back
+            color colorWhitePure
+.frame_white
+    border-radius 1vw
+    border .8px solid #3c3c3c
 
 #header_hero
     width 100vw
@@ -184,6 +198,8 @@ body
     align-items center
 .iphonex>img
     max-width 20vw
+
+
 
 .uidemo_new_version
     width 100vw

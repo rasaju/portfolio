@@ -13,6 +13,7 @@ colorWhitePure = #ffffff;
 colorBlue = #1dc5c9;
 colorBlueLight = #3fd9da;
 colorGray = #e8e8e8;
+colorYellow = #efea80;
 
 body
     background-color colorGray
@@ -41,9 +42,11 @@ p
 	text-align justify
 //標題替換英文字型 Gelasio
 .font_superTitle
-		font-family 'Gelasio'
+	font-family 'Gelasio'
+	&.white
+		color colorYellow
 .font_superTitle_ch
-		font-family 'Noto Serif TC'
+	font-family 'Noto Serif TC'
 	
 .font_1_black
 	font-size 1em
@@ -57,6 +60,12 @@ p
 	font-weight 600
 	color colorBlue
 	line-height 1.5
+.font_1_white
+	font-size 1em
+	letter-spacing .2em
+	font-weight 500
+	color colorWhitePure
+	line-height 1.5	
 
 
 .font_06_black
