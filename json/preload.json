@@ -3,10 +3,22 @@
         "src": "images/cis/hero_logo_loop.png"
     },
     {
+        "src": "images/cis/illustration.png"
+    },
+    {
         "src": "images/cis/draw.jpg"
     },
     {
         "src": "images/cis/guide.jpg"
+    },
+    {
+        "src": "images/cis/bg_landing_01.png"
+    },
+    {
+        "src": "images/cis/bg_landing_02.png"
+    },
+    {
+        "src": "images/cis/bg_landing_04.png"
     },
     {
         "src": "images/header_hero/header_part_bg.jpg"
