@@ -3,6 +3,18 @@
         "src": "images/cis/hero_logo_loop.png"
     },
     {
+        "src": "images/header_hero/header_part_ui_a.png"
+    },
+    {
+        "src": "images/header_hero/header_part_bg.jpg"
+    },
+    {
+        "src": "images/header_hero/header_part_mac.png"
+    },
+    {
+        "src": "images/header_hero/header_part_ui_b.png"
+    },
+    {
         "src": "images/cis/illustration.png"
     },
     {
@@ -19,18 +31,6 @@
     },
     {
         "src": "images/cis/bg_landing_04.png"
-    },
-    {
-        "src": "images/header_hero/header_part_bg.jpg"
-    },
-    {
-        "src": "images/header_hero/header_part_mac.png"
-    },
-    {
-        "src": "images/header_hero/header_part_ui_a.png"
-    },
-    {
-        "src": "images/header_hero/header_part_ui_b.png"
     },
     {
         "src": "images/seenews/n_0.png"
